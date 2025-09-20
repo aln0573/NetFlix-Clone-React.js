@@ -4,7 +4,7 @@ import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Player from './pages/Player/Player';
 import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from './fireBase';
+import { auth } from './firebase';
 import { ToastContainer, toast } from 'react-toastify';
 
 const App = () => {
