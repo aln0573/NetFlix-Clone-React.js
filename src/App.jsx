@@ -2,26 +2,26 @@ import React, { useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
-import Player from './pages/Player/Player';
+import Player from './pages/Player/player';
 import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from './firebase';  // ✅ fixed here
+import { auth } from './fireBase';
 import { ToastContainer, toast } from 'react-toastify';
 
 const App = () => {
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        console.log("Logged In");
-        navigate('/');
+        console.log("Logged In")
+        navigate('/')
       } else {
-        console.log("Logged Out");
-        navigate('/login');
+        console.log("Logged Out")
+        navigate('/login')
       }
-    });
-  }, []);
+    })
+  }, [])
 
   return (
     <div>
